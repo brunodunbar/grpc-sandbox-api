@@ -50,9 +50,8 @@ public class GRpcWrapper {
         Services.ExtracaoRequest.Builder builder = Services.ExtracaoRequest.newBuilder()
                 .setId(request.getId());
 
-        int index = 0;
         for (Object value : request.getValues()) {
-            builder.setValues(index++, wrap(value));
+            builder.addValues(wrap(value));
         }
 
         return builder.build();

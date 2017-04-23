@@ -21,6 +21,14 @@ public class ExtracaoRequest {
         return values;
     }
 
+    @Override
+    public String toString() {
+        return "ExtracaoRequest{" +
+                "id=" + id +
+                ", values=" + values +
+                '}';
+    }
+
     public static class Builder {
 
         private ExtracaoRequest request = new ExtracaoRequest();

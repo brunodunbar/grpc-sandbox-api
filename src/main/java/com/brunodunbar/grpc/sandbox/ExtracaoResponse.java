@@ -22,6 +22,15 @@ public class ExtracaoResponse {
         return message;
     }
 
+    @Override
+    public String toString() {
+        return "ExtracaoResponse{" +
+                "id=" + id +
+                ", success=" + success +
+                ", message='" + message + '\'' +
+                '}';
+    }
+
     public static class Builder {
 
         private ExtracaoResponse response = new ExtracaoResponse();
