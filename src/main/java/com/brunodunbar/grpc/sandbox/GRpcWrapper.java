@@ -1,4 +1,4 @@
-import com.brunodunbar.grpc.sandbox.Services;
+package com.brunodunbar.grpc.sandbox;
 
 import java.util.Objects;
 import java.util.stream.Collectors;

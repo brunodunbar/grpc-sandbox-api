@@ -1,3 +1,4 @@
+package com.brunodunbar.grpc.sandbox;
 
 public class ExtracaoResponse {
 
