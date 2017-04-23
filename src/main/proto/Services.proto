@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+option java_package = "com.brunodunbar.grpc.sandbox";
+
+// The greeter service definition.
+service Extracao {
+    // Sends a greeting
+    rpc Extrair (stream ExtracaoRequest) returns (stream ExtracaoResponse) {}
+
+}
+
+// The request message containing the user's name.
+message ExtracaoRequest {
+    int64 id = 1;
+    repeated Value values = 2;
+}
+
+// The response message containing the greetings
+message ExtracaoResponse {
+    int64 id = 1;
+    bool success = 2;
+    string message = 3;
+}
+
+enum ValueType {
+    NULL = 0;
+    STRING = 1;
+    INTEGER = 2;
+    LONG = 3;
+    FLOAT = 4;
+    DOUBLE = 5;
+}
+
+message Value {
+
+    ValueType type = 1;
+
+    oneof value {
+        string stringValue = 2;
+        int32 intValue = 3;
+        int64 longValue = 4;
+        float floatValue = 5;
+        double doubleValue = 6;
+    }
+}
